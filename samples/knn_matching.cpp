@@ -41,10 +41,10 @@
 
 #include <opencv2/line_descriptor.hpp>
 
-#include "opencv2/core/utility.hpp"
-#include <opencv2/imgproc.hpp>
-#include <opencv2/features2d.hpp>
-#include <opencv2/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/features2d/features2d.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include "opencv2/core/core.hpp"
 
 #include <iostream>
 #include <vector>
@@ -116,12 +116,12 @@ uchar invertSingleBits( uchar dividend_char, int numBits )
   return result;
 }
 
-int main( int argc, char** argv )
+int main( int argc, const char** argv )
 {
-  /* get parameters from comand line */
+  /* get parameters from command line */
   CommandLineParser parser( argc, argv, keys );
-  String image_path1 = parser.get<String>( 0 );
-  String image_path2 = parser.get<String>( 1 );
+  String image_path1 = parser.get<String>( "1" );
+  String image_path2 = parser.get<String>( "2" );
 
   if( image_path1.empty() || image_path2.empty() )
   {
@@ -193,5 +193,4 @@ int main( int argc, char** argv )
   bdm->knnMatch( descr1, descr2, matches, 6 );
 
 }
-
 

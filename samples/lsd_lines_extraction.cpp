@@ -41,10 +41,10 @@
 
 #include <opencv2/line_descriptor.hpp>
 
-#include "opencv2/core/utility.hpp"
-#include <opencv2/imgproc.hpp>
-#include <opencv2/features2d.hpp>
-#include <opencv2/highgui.hpp>
+//#include "opencv2/core/utility.hpp"
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/features2d/features2d.hpp>
+#include <opencv2/highgui/highgui.hpp>
 
 #include <iostream>
 
@@ -65,7 +65,7 @@ int main( int argc, char** argv )
 {
   /* get parameters from comand line */
   CommandLineParser parser( argc, argv, keys );
-  String image_path = parser.get<String>( 0 );
+  String image_path = parser.get<String>( "1" );
 
   if( image_path.empty() )
   {
