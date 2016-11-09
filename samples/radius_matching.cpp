@@ -55,8 +55,7 @@ using namespace cv::line_descriptor;
 static const std::string images[] =
 { "cameraman.jpg", "church.jpg", "church2.png", "einstein.jpg", "stuff.jpg" };
 
-static const char* keys =
-{ "{@image_path | | Image path }" };
+static const char* keys = {"{ 1 | | | path to image }" };
 
 static void help()
 {

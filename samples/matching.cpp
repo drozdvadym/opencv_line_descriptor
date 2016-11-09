@@ -54,18 +54,21 @@ using namespace cv;
 using namespace cv::line_descriptor;
 
 static const char* keys =
-{ "{@image_path1 | | Image path 1 }"
-    "{@image_path2 | | Image path 2 }" };
+    {
+      "{ 1 | | | path to image1 }"
+      "{ 2 | | | path to image2 }"
+    };
 
 static void help()
 {
-  std::cout << "\nThis example shows the functionalities of lines extraction " << "and descriptors computation furnished by BinaryDescriptor class\n"
-            << "Please, run this sample using a command in the form\n" << "./example_line_descriptor_compute_descriptors <path_to_input_image 1>"
+  std::cout << "\nThis example shows the functionalities of lines extraction "
+            << "and descriptors computation furnished by BinaryDescriptor class\n"
+            << "Please, run this sample using a command in the form\n"
+            << "./example_line_descriptor_compute_descriptors <path_to_input_image 1> "
             << "<path_to_input_image 2>" << std::endl;
-
 }
 
-int main( int argc, char** argv )
+int main( int argc, const char** argv )
 {
   /* get parameters from command line */
   CommandLineParser parser( argc, argv, keys );

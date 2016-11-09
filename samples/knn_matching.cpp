@@ -54,8 +54,10 @@ using namespace cv;
 using namespace cv::line_descriptor;
 
 static const char* keys =
-{ "{@image_path1 | | Image path 1 }"
-    "{@image_path2 | | Image path 2 }" };
+    {
+        "{ 1 | | | path to image1 }"
+        "{ 2 | | | path to image2 }"
+    };
 
 static void help()
 {
